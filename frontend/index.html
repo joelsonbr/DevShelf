@@ -3,7 +3,6 @@
 
 <head>
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>DevShelf</title>
@@ -13,8 +12,25 @@
 
 <body>
 
+    <!-- HEADER -->
+
     <header>
-        <h1>DevShelf</h1>
+
+        <a href="/" class="logo">
+            <span>◈</span>
+            DevShelf
+        </a>
+
+
+        <div class="search">
+            <span>⌕</span>
+
+            <input
+                type="text"
+                placeholder="Buscar projetos, tecnologias..."
+            >
+        </div>
+
 
         <nav>
             <a href="/">Início</a>
@@ -22,48 +38,145 @@
             <a href="#">Categorias</a>
             <a href="#">Criadores</a>
         </nav>
+
+
+        <div class="header-actions">
+
+            <button class="login-button">
+                Entrar
+            </button>
+
+            <button class="publish-button">
+                + Publicar projeto
+            </button>
+
+        </div>
+
     </header>
 
 
+    <!-- CONTEÚDO -->
+
     <main>
+
+
+        <!-- HERO -->
 
         <section class="hero">
 
-            <h2>Descubra. Crie. Compartilhe.</h2>
+            <div class="hero-content">
 
-            <p>
-                Encontre projetos, componentes, interfaces,
-                animações e ferramentas criadas por desenvolvedores.
-            </p>
-
-            <button>Explorar projetos</button>
-
-        </section>
+                <span class="hero-badge">
+                    ✦ A comunidade para desenvolvedores
+                </span>
 
 
-        <section class="categories">
+                <h2>
+                    Descubra projetos.<br>
+                    <span>Aprenda com código real.</span>
+                </h2>
 
-            <h2>Explore por categoria</h2>
 
-            <div class="category-list">
+                <p>
+                    Explore projetos, componentes, interfaces e ferramentas
+                    criadas por desenvolvedores. Aprenda, inspire-se e
+                    compartilhe suas próprias criações.
+                </p>
 
-                <button>🎨 UI / Design</button>
-                <button>🌐 Websites</button>
-                <button>⚡ JavaScript</button>
-                <button>🐍 Python</button>
-                <button>🤖 IA</button>
-                <button>✨ Animações</button>
+
+                <div class="hero-actions">
+
+                    <button class="hero-primary">
+                        Explorar projetos →
+                    </button>
+
+                    <button class="hero-secondary">
+                        Publicar projeto
+                    </button>
+
+                </div>
 
             </div>
 
         </section>
 
 
+
+        <!-- CATEGORIAS -->
+
+        <section class="categories">
+
+            <h2>Explore por categoria</h2>
+
+
+            <div class="category-list">
+
+                <button>🎨 UI / Design</button>
+
+                <button>🌐 Websites</button>
+
+                <button>🤖 Inteligência Artificial</button>
+
+                <button>✨ Animações</button>
+
+                <button>🎮 Games</button>
+
+                <button>🧩 Componentes</button>
+
+                <button>🛠️ Ferramentas</button>
+
+                <button>📱 Mobile</button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- LINGUAGENS -->
+
+        <section class="categories">
+
+            <h2>Explore por linguagem</h2>
+
+
+            <div class="category-list">
+
+                <button>HTML</button>
+
+                <button>CSS</button>
+
+                <button>JavaScript</button>
+
+                <button>TypeScript</button>
+
+                <button>Python</button>
+
+                <button>Java</button>
+
+                <button>C#</button>
+
+                <button>C++</button>
+
+                <button>React</button>
+
+                <button>Node.js</button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- PROJETOS EM DESTAQUE -->
+
         <section class="projects">
 
             <h2>Projetos em destaque</h2>
 
+
             <div class="project-list">
+
 
                 <article class="project-card">
 
@@ -74,11 +187,16 @@
                         HTML, CSS e JavaScript.
                     </p>
 
-                    <span>HTML · CSS · JavaScript</span>
+                    <span>
+                        HTML · CSS · JavaScript
+                    </span>
 
-                    <strong>R$ 9,90</strong>
+                    <strong>
+                        R$ 9,90
+                    </strong>
 
                 </article>
+
 
 
                 <article class="project-card">
@@ -90,11 +208,16 @@
                         e efeitos interativos.
                     </p>
 
-                    <span>HTML · CSS · JS</span>
+                    <span>
+                        HTML · CSS · JS
+                    </span>
 
-                    <strong>Grátis</strong>
+                    <strong>
+                        Grátis
+                    </strong>
 
                 </article>
+
 
 
                 <article class="project-card">
@@ -106,24 +229,185 @@
                         utilizando uma API de IA.
                     </p>
 
-                    <span>JavaScript · AI</span>
+                    <span>
+                        JavaScript · AI
+                    </span>
 
-                    <strong>R$ 19,90</strong>
+                    <strong>
+                        R$ 19,90
+                    </strong>
 
                 </article>
+
+
+
+                <article class="project-card">
+
+                    <h3>Neon Dashboard</h3>
+
+                    <p>
+                        Dashboard moderno com gráficos,
+                        métricas e interface interativa.
+                    </p>
+
+                    <span>
+                        HTML · CSS · JavaScript
+                    </span>
+
+                    <strong>
+                        R$ 14,90
+                    </strong>
+
+                </article>
+
+
+
+                <article class="project-card">
+
+                    <h3>3D Landing Page</h3>
+
+                    <p>
+                        Landing page moderna com elementos
+                        tridimensionais e efeitos visuais.
+                    </p>
+
+                    <span>
+                        HTML · CSS · Three.js
+                    </span>
+
+                    <strong>
+                        R$ 24,90
+                    </strong>
+
+                </article>
+
+
+
+                <article class="project-card">
+
+                    <h3>Smart Chatbot</h3>
+
+                    <p>
+                        Chatbot inteligente para aplicações
+                        web utilizando inteligência artificial.
+                    </p>
+
+                    <span>
+                        JavaScript · Node.js · IA
+                    </span>
+
+                    <strong>
+                        Grátis
+                    </strong>
+
+                </article>
+
 
             </div>
 
         </section>
 
+
+
+        <!-- EM ALTA -->
+
+        <section class="projects">
+
+            <h2>🔥 Em alta</h2>
+
+
+            <div class="project-list">
+
+
+                <article class="project-card">
+
+                    <h3>AI Assistant</h3>
+
+                    <p>
+                        Assistente inteligente criado
+                        para aplicações modernas.
+                    </p>
+
+                    <span>
+                        JavaScript · Node.js · IA
+                    </span>
+
+                    <strong>
+                        R$ 19,90
+                    </strong>
+
+                </article>
+
+
+
+                <article class="project-card">
+
+                    <h3>Neon Dashboard</h3>
+
+                    <p>
+                        Dashboard moderno com gráficos,
+                        métricas e efeitos interativos.
+                    </p>
+
+                    <span>
+                        HTML · CSS · JavaScript
+                    </span>
+
+                    <strong>
+                        R$ 14,90
+                    </strong>
+
+                </article>
+
+
+
+                <article class="project-card">
+
+                    <h3>Smart Chatbot</h3>
+
+                    <p>
+                        Chatbot inteligente para aplicações
+                        web utilizando inteligência artificial.
+                    </p>
+
+                    <span>
+                        JavaScript · Node.js · IA
+                    </span>
+
+                    <strong>
+                        Grátis
+                    </strong>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
     </main>
 
 
+
+    <!-- FOOTER -->
+
     <footer>
 
-        <p>© 2026 DevShelf</p>
+        <a
+            href="https://github.com/joelsonbr/DevShelf"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            GitHub
+        </a>
+
+        <p>
+            © 2026 DevShelf
+        </p>
 
     </footer>
+
 
 </body>
 
