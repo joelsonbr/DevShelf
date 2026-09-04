@@ -1,6 +1,9 @@
 const express = require('express');
+const path = require('path')
 const app = express();
 const PORT = process.env.PORT ||3000;
+
+app.use(express.static(path.join(__dirname, "frontend")));
 
 app.get('/', (req, res) => {
     console.log('Alguém acessou o DevShelf!');
@@ -8,5 +11,5 @@ app.get('/', (req, res) => {
 });
 
 app.listen(PORT, '0.0.0.0', () => {
-    console.log(`DevShelft rodando em http://localhost:${PORT}`);
+    console.log(`🚀 DevShelft rodando`);
 });
