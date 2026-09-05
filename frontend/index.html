@@ -7,87 +7,80 @@
 
     <title>DevShelf</title>
 
+    <!-- STYLE -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- ICONIFY -->
+    <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
 </head>
 
 <body>
 
-    <!-- HEADER -->
+    <!-- ==================== HEADER ==================== -->
 
     <header>
 
-        <a href="/" class="logo">
+        <!-- LOGO -->
+        <a href="#" class="logo">
             <span>◈</span>
             DevShelf
         </a>
 
-
+        <!-- BUSCA -->
         <div class="search">
             <span>⌕</span>
-
-            <input
-                type="text"
-                placeholder="Buscar projetos, tecnologias..."
-            >
+            <input type="text" placeholder="Buscar projetos...">
         </div>
 
-
+        <!-- NAVEGAÇÃO -->
         <nav>
-            <a href="/">Início</a>
-            <a href="#">Projetos</a>
+            <a href="#">Explorar</a>
             <a href="#">Categorias</a>
-            <a href="#">Criadores</a>
+            <a href="#">Tecnologias</a>
         </nav>
 
-
+        <!-- AÇÕES -->
         <div class="header-actions">
-
             <button class="login-button">
                 Entrar
             </button>
 
             <button class="publish-button">
-                + Publicar projeto
+                Publicar projeto
             </button>
-
         </div>
 
     </header>
 
 
-    <!-- CONTEÚDO -->
-
     <main>
 
-
-        <!-- HERO -->
+        <!-- ==================== HERO ==================== -->
 
         <section class="hero">
 
             <div class="hero-content">
 
                 <span class="hero-badge">
-                    ✦ A comunidade para desenvolvedores
+                    O marketplace para desenvolvedores
                 </span>
 
-
                 <h2>
-                    Descubra projetos.<br>
-                    <span>Aprenda com código real.</span>
+                    Descubra projetos.
+                    <span>Aprenda. Crie.</span>
                 </h2>
 
-
                 <p>
-                    Explore projetos, componentes, interfaces e ferramentas
-                    criadas por desenvolvedores. Aprenda, inspire-se e
-                    compartilhe suas próprias criações.
+                    Encontre projetos, interfaces e ferramentas criadas
+                    por desenvolvedores. Compre, explore e transforme
+                    ideias em código.
                 </p>
-
 
                 <div class="hero-actions">
 
                     <button class="hero-primary">
-                        Explorar projetos →
+                        Explorar projetos
+                        <span class="hero-arrow">→</span>
                     </button>
 
                     <button class="hero-secondary">
@@ -101,313 +94,1361 @@
         </section>
 
 
-
-        <!-- CATEGORIAS -->
+        <!-- ==================== CATEGORIAS ==================== -->
 
         <section class="categories">
 
-            <h2>Explore por categoria</h2>
+            <div class="section-heading">
+
+                <div>
+                    <span class="section-label">
+                        EXPLORE
+                    </span>
+
+                    <h2>
+                        Explore por categoria
+                    </h2>
+                </div>
+
+                <a href="#" class="see-all">
+                    Ver todas →
+                </a>
+
+            </div>
 
 
             <div class="category-list">
 
-                <button>🎨 UI / Design</button>
+                <!-- UI / DESIGN -->
+                <button class="category-card">
 
-                <button>🌐 Websites</button>
+                    <span class="category-icon">
+                        <iconify-icon icon="lucide:palette"></iconify-icon>
+                    </span>
 
-                <button>🤖 Inteligência Artificial</button>
+                    <strong>UI / Design</strong>
 
-                <button>✨ Animações</button>
+                    <p>
+                        Interfaces e experiências modernas.
+                    </p>
 
-                <button>🎮 Games</button>
+                    <span class="category-count">
+                        124 projetos
+                    </span>
 
-                <button>🧩 Componentes</button>
+                </button>
 
-                <button>🛠️ Ferramentas</button>
 
-                <button>📱 Mobile</button>
+                <!-- WEBSITES -->
+                <button class="category-card">
+
+                    <span class="category-icon">
+                        <iconify-icon icon="lucide:globe-2"></iconify-icon>
+                    </span>
+
+                    <strong>Websites</strong>
+
+                    <p>
+                        Sites e páginas para projetos web.
+                    </p>
+
+                    <span class="category-count">
+                        218 projetos
+                    </span>
+
+                </button>
+
+
+                <!-- IA -->
+                <button class="category-card">
+
+                    <span class="category-icon">
+                        <iconify-icon icon="lucide:bot"></iconify-icon>
+                    </span>
+
+                    <strong>Inteligência Artificial</strong>
+
+                    <p>
+                        Projetos utilizando IA e automação.
+                    </p>
+
+                    <span class="category-count">
+                        86 projetos
+                    </span>
+
+                </button>
+
+
+                <!-- ANIMAÇÕES -->
+                <button class="category-card">
+
+                    <span class="category-icon">
+                        <iconify-icon icon="lucide:sparkles"></iconify-icon>
+                    </span>
+
+                    <strong>Animações</strong>
+
+                    <p>
+                        Efeitos, animações e experiências.
+                    </p>
+
+                    <span class="category-count">
+                        73 projetos
+                    </span>
+
+                </button>
+
+
+                <!-- GAMES -->
+                <button class="category-card">
+
+                    <span class="category-icon">
+                        <iconify-icon icon="lucide:gamepad-2"></iconify-icon>
+                    </span>
+
+                    <strong>Games</strong>
+
+                    <p>
+                        Jogos e experiências interativas.
+                    </p>
+
+                    <span class="category-count">
+                        91 projetos
+                    </span>
+
+                </button>
+
+
+                <!-- COMPONENTES -->
+                <button class="category-card">
+
+                    <span class="category-icon">
+                        <iconify-icon icon="lucide:blocks"></iconify-icon>
+                    </span>
+
+                    <strong>Componentes</strong>
+
+                    <p>
+                        Componentes prontos para seus projetos.
+                    </p>
+
+                    <span class="category-count">
+                        156 projetos
+                    </span>
+
+                </button>
+
+
+                <!-- FERRAMENTAS -->
+                <button class="category-card">
+
+                    <span class="category-icon">
+                        <iconify-icon icon="lucide:wrench"></iconify-icon>
+                    </span>
+
+                    <strong>Ferramentas</strong>
+
+                    <p>
+                        Ferramentas para facilitar seu desenvolvimento.
+                    </p>
+
+                    <span class="category-count">
+                        64 projetos
+                    </span>
+
+                </button>
+
+
+                <!-- MOBILE -->
+                <button class="category-card">
+
+                    <span class="category-icon">
+                        <iconify-icon icon="lucide:smartphone"></iconify-icon>
+                    </span>
+
+                    <strong>Mobile</strong>
+
+                    <p>
+                        Aplicativos e projetos para dispositivos móveis.
+                    </p>
+
+                    <span class="category-count">
+                        112 projetos
+                    </span>
+
+                </button>
 
             </div>
 
         </section>
 
 
+        <!-- ==================== LINGUAGENS ==================== -->
 
-        <!-- LINGUAGENS -->
+        <section class="languages">
 
-        <section class="categories">
+            <div class="section-heading">
 
-            <h2>Explore por linguagem</h2>
+                <div>
+                    <span class="section-label">
+                        TECNOLOGIAS
+                    </span>
+
+                    <h2>
+                        Explore por linguagem
+                    </h2>
+                </div>
+
+                <a href="#" class="see-all">
+                    Ver todas →
+                </a>
+
+            </div>
 
 
-            <div class="category-list">
+            <div class="language-list">
 
-                <button>HTML</button>
+                <button class="language-card">
 
-                <button>CSS</button>
+                    <span class="language-icon">
+                        <iconify-icon icon="devicon:html5"></iconify-icon>
+                    </span>
 
-                <button>JavaScript</button>
+                    <div>
+                        <strong>HTML</strong>
+                        <small>86 projetos</small>
+                    </div>
 
-                <button>TypeScript</button>
+                </button>
 
-                <button>Python</button>
 
-                <button>Java</button>
+                <button class="language-card">
 
-                <button>C#</button>
+                    <span class="language-icon">
+                        <iconify-icon icon="devicon:css3"></iconify-icon>
+                    </span>
 
-                <button>C++</button>
+                    <div>
+                        <strong>CSS</strong>
+                        <small>94 projetos</small>
+                    </div>
 
-                <button>React</button>
+                </button>
 
-                <button>Node.js</button>
+
+                <button class="language-card">
+
+                    <span class="language-icon">
+                        <iconify-icon icon="devicon:javascript"></iconify-icon>
+                    </span>
+
+                    <div>
+                        <strong>JavaScript</strong>
+                        <small>142 projetos</small>
+                    </div>
+
+                </button>
+
+
+                <button class="language-card">
+
+                    <span class="language-icon">
+                        <iconify-icon icon="devicon:typescript"></iconify-icon>
+                    </span>
+
+                    <div>
+                        <strong>TypeScript</strong>
+                        <small>78 projetos</small>
+                    </div>
+
+                </button>
+
+
+                <button class="language-card">
+
+                    <span class="language-icon">
+                        <iconify-icon icon="devicon:python"></iconify-icon>
+                    </span>
+
+                    <div>
+                        <strong>Python</strong>
+                        <small>103 projetos</small>
+                    </div>
+
+                </button>
+
+
+                <button class="language-card">
+
+                    <span class="language-icon">
+                        <iconify-icon icon="devicon:java"></iconify-icon>
+                    </span>
+
+                    <div>
+                        <strong>Java</strong>
+                        <small>65 projetos</small>
+                    </div>
+
+                </button>
+
+
+                <button class="language-card">
+
+                    <span class="language-icon">
+                        <iconify-icon icon="devicon:csharp"></iconify-icon>
+                    </span>
+
+                    <div>
+                        <strong>C#</strong>
+                        <small>57 projetos</small>
+                    </div>
+
+                </button>
+
+
+                <button class="language-card">
+
+                    <span class="language-icon">
+                        <iconify-icon icon="devicon:cplusplus"></iconify-icon>
+                    </span>
+
+                    <div>
+                        <strong>C++</strong>
+                        <small>42 projetos</small>
+                    </div>
+
+                </button>
+
+
+                <button class="language-card">
+
+                    <span class="language-icon">
+                        <iconify-icon icon="devicon:react"></iconify-icon>
+                    </span>
+
+                    <div>
+                        <strong>React</strong>
+                        <small>97 projetos</small>
+                    </div>
+
+                </button>
+
+
+                <button class="language-card">
+
+                    <span class="language-icon">
+                        <iconify-icon icon="devicon:nodejs"></iconify-icon>
+                    </span>
+
+                    <div>
+                        <strong>Node.js</strong>
+                        <small>81 projetos</small>
+                    </div>
+
+                </button>
 
             </div>
 
         </section>
 
 
-
-        <!-- PROJETOS EM DESTAQUE -->
+        <!-- ==================== PROJETOS EM DESTAQUE ==================== -->
 
         <section class="projects">
 
-            <h2>Projetos em destaque</h2>
+            <div class="section-heading">
+
+                <div>
+                    <span class="section-label">
+                        DESTAQUES
+                    </span>
+
+                    <h2>
+                        Projetos em destaque
+                    </h2>
+                </div>
+
+                <a href="#" class="see-all">
+                    Ver todos →
+                </a>
+
+            </div>
 
 
             <div class="project-list">
 
 
+                <!-- ==================== PROJETO 1 ==================== -->
+
                 <article class="project-card">
 
-                    <h3>Galaxy Interface</h3>
+                    <!-- PREVIEW -->
+                    <div class="project-preview">
 
-                    <p>
-                        Interface futurista criada com
-                        HTML, CSS e JavaScript.
-                    </p>
+                        <div class="preview-content">
 
-                    <span>
-                        HTML · CSS · JavaScript
-                    </span>
+                            <span>
+                                GALAXY
+                            </span>
 
-                    <strong>
-                        R$ 9,90
-                    </strong>
+                            <strong>
+                                Interface
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- CONTEÚDO -->
+                    <div class="project-content">
+
+                        <!-- TÍTULO + AUTOR -->
+                        <div class="project-title">
+
+                            <div>
+
+                                <h3>
+                                    Galaxy Interface
+                                </h3>
+
+                                <small>
+                                    por Joelson
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- DESCRIÇÃO -->
+                        <p>
+                            Interface futurista criada com HTML,
+                            CSS e JavaScript.
+                        </p>
+
+
+                        <!-- TECNOLOGIAS -->
+                        <div class="project-techs">
+
+                            <span class="tech">
+
+                                <iconify-icon icon="devicon:html5">
+                                </iconify-icon>
+
+                                HTML
+
+                            </span>
+
+
+                            <span class="tech">
+
+                                <iconify-icon icon="devicon:css3">
+                                </iconify-icon>
+
+                                CSS
+
+                            </span>
+
+
+                            <span class="tech">
+
+                                <iconify-icon icon="devicon:javascript">
+                                </iconify-icon>
+
+                                JavaScript
+
+                            </span>
+
+                        </div>
+
+
+                        <!-- INFORMAÇÕES -->
+                        <div class="project-info">
+
+                            <span>
+                                ★ 4.9
+                            </span>
+
+                            <span>
+                                ◉ 1.2k visualizações
+                            </span>
+
+                        </div>
+
+
+                        <!-- PREÇO + BOTÃO -->
+                        <div class="project-bottom">
+
+                            <strong>
+                                R$ 9,90
+                            </strong>
+
+                            <button>
+                                Ver projeto →
+                            </button>
+
+                        </div>
+
+                    </div>
 
                 </article>
 
 
+                <!-- ==================== PROJETO 2 ==================== -->
 
                 <article class="project-card">
 
-                    <h3>Animated Portfolio</h3>
+                    <div class="project-preview">
 
-                    <p>
-                        Portfolio moderno com animações
-                        e efeitos interativos.
-                    </p>
+                        <div class="preview-content">
 
-                    <span>
-                        HTML · CSS · JS
-                    </span>
+                            <span>
+                                PORTFOLIO
+                            </span>
 
-                    <strong>
-                        Grátis
-                    </strong>
+                            <strong>
+                                Animated
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                    <div class="project-content">
+
+                        <div class="project-title">
+
+                            <div>
+
+                                <h3>
+                                    Animated Portfolio
+                                </h3>
+
+                                <small>
+                                    por DevStudio
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                        <p>
+                            Portfolio moderno com animações
+                            e efeitos interativos.
+                        </p>
+
+                        <div class="project-techs">
+
+                            <span class="tech">
+                                <iconify-icon icon="devicon:html5"></iconify-icon>
+                                HTML
+                            </span>
+
+                            <span class="tech">
+                                <iconify-icon icon="devicon:css3"></iconify-icon>
+                                CSS
+                            </span>
+
+                            <span class="tech">
+                                <iconify-icon icon="devicon:javascript"></iconify-icon>
+                                JavaScript
+                            </span>
+
+                        </div>
+
+                        <div class="project-info">
+
+                            <span>
+                                ★ 4.8
+                            </span>
+
+                            <span>
+                                ◉ 980 visualizações
+                            </span>
+
+                        </div>
+
+                        <div class="project-bottom">
+
+                            <strong>
+                                Grátis
+                            </strong>
+
+                            <button>
+                                Ver projeto →
+                            </button>
+
+                        </div>
+
+                    </div>
 
                 </article>
 
 
+                <!-- ==================== PROJETO 3 ==================== -->
 
                 <article class="project-card">
 
-                    <h3>AI Assistant</h3>
+                    <div class="project-preview">
 
-                    <p>
-                        Projeto de assistente inteligente
-                        utilizando uma API de IA.
-                    </p>
+                        <div class="preview-content">
 
-                    <span>
-                        JavaScript · AI
-                    </span>
+                            <span>
+                                ARTIFICIAL
+                            </span>
 
-                    <strong>
-                        R$ 19,90
-                    </strong>
+                            <strong>
+                                Intelligence
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                    <div class="project-content">
+
+                        <div class="project-title">
+
+                            <div>
+
+                                <h3>
+                                    AI Assistant
+                                </h3>
+
+                                <small>
+                                    por AI Labs
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                        <p>
+                            Assistente inteligente utilizando
+                            uma API de inteligência artificial.
+                        </p>
+
+                        <div class="project-techs">
+
+                            <span class="tech">
+                                <iconify-icon icon="devicon:javascript"></iconify-icon>
+                                JavaScript
+                            </span>
+
+                            <span class="tech">
+                                <iconify-icon icon="devicon:nodejs"></iconify-icon>
+                                Node.js
+                            </span>
+
+                        </div>
+
+                        <div class="project-info">
+
+                            <span>
+                                ★ 4.9
+                            </span>
+
+                            <span>
+                                ◉ 2.4k visualizações
+                            </span>
+
+                        </div>
+
+                        <div class="project-bottom">
+
+                            <strong>
+                                R$ 19,90
+                            </strong>
+
+                            <button>
+                                Ver projeto →
+                            </button>
+
+                        </div>
+
+                    </div>
 
                 </article>
 
 
+                <!-- ==================== PROJETO 4 ==================== -->
 
                 <article class="project-card">
 
-                    <h3>Neon Dashboard</h3>
+                    <div class="project-preview">
 
-                    <p>
-                        Dashboard moderno com gráficos,
-                        métricas e interface interativa.
-                    </p>
+                        <div class="preview-content">
 
-                    <span>
-                        HTML · CSS · JavaScript
-                    </span>
+                            <span>
+                                NEON
+                            </span>
 
-                    <strong>
-                        R$ 14,90
-                    </strong>
+                            <strong>
+                                Dashboard
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                    <div class="project-content">
+
+                        <div class="project-title">
+
+                            <div>
+
+                                <h3>
+                                    Neon Dashboard
+                                </h3>
+
+                                <small>
+                                    por CodeLab
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                        <p>
+                            Dashboard moderno com gráficos,
+                            métricas e interface interativa.
+                        </p>
+
+                        <div class="project-techs">
+
+                            <span class="tech">
+                                <iconify-icon icon="devicon:html5"></iconify-icon>
+                                HTML
+                            </span>
+
+                            <span class="tech">
+                                <iconify-icon icon="devicon:css3"></iconify-icon>
+                                CSS
+                            </span>
+
+                            <span class="tech">
+                                <iconify-icon icon="devicon:javascript"></iconify-icon>
+                                JavaScript
+                            </span>
+
+                        </div>
+
+                        <div class="project-info">
+
+                            <span>
+                                ★ 4.7
+                            </span>
+
+                            <span>
+                                ◉ 1.7k visualizações
+                            </span>
+
+                        </div>
+
+                        <div class="project-bottom">
+
+                            <strong>
+                                R$ 14,90
+                            </strong>
+
+                            <button>
+                                Ver projeto →
+                            </button>
+
+                        </div>
+
+                    </div>
 
                 </article>
 
 
+                <!-- ==================== PROJETO 5 ==================== -->
 
                 <article class="project-card">
 
-                    <h3>3D Landing Page</h3>
+                    <div class="project-preview">
 
-                    <p>
-                        Landing page moderna com elementos
-                        tridimensionais e efeitos visuais.
-                    </p>
+                        <div class="preview-content">
 
-                    <span>
-                        HTML · CSS · Three.js
-                    </span>
+                            <span>
+                                THREE
+                            </span>
 
-                    <strong>
-                        R$ 24,90
-                    </strong>
+                            <strong>
+                                3D Experience
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                    <div class="project-content">
+
+                        <div class="project-title">
+
+                            <div>
+
+                                <h3>
+                                    3D Landing Page
+                                </h3>
+
+                                <small>
+                                    por CreativeDev
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                        <p>
+                            Landing page moderna com elementos
+                            tridimensionais e efeitos visuais.
+                        </p>
+
+                        <div class="project-techs">
+
+                            <span class="tech">
+                                <iconify-icon icon="devicon:html5"></iconify-icon>
+                                HTML
+                            </span>
+
+                            <span class="tech">
+                                <iconify-icon icon="devicon:css3"></iconify-icon>
+                                CSS
+                            </span>
+
+                            <span class="tech">
+                                Three.js
+                            </span>
+
+                        </div>
+
+                        <div class="project-info">
+
+                            <span>
+                                ★ 4.9
+                            </span>
+
+                            <span>
+                                ◉ 3.1k visualizações
+                            </span>
+
+                        </div>
+
+                        <div class="project-bottom">
+
+                            <strong>
+                                R$ 24,90
+                            </strong>
+
+                            <button>
+                                Ver projeto →
+                            </button>
+
+                        </div>
+
+                    </div>
 
                 </article>
 
 
+                <!-- ==================== PROJETO 6 ==================== -->
 
                 <article class="project-card">
 
-                    <h3>Smart Chatbot</h3>
+                    <div class="project-preview">
 
-                    <p>
-                        Chatbot inteligente para aplicações
-                        web utilizando inteligência artificial.
-                    </p>
+                        <div class="preview-content">
 
-                    <span>
-                        JavaScript · Node.js · IA
-                    </span>
+                            <span>
+                                SMART
+                            </span>
 
-                    <strong>
-                        Grátis
-                    </strong>
+                            <strong>
+                                Chatbot
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                    <div class="project-content">
+
+                        <div class="project-title">
+
+                            <div>
+
+                                <h3>
+                                    Smart Chatbot
+                                </h3>
+
+                                <small>
+                                    por DevAI
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                        <p>
+                            Chatbot inteligente para aplicações
+                            web utilizando inteligência artificial.
+                        </p>
+
+                        <div class="project-techs">
+
+                            <span class="tech">
+                                <iconify-icon icon="devicon:javascript"></iconify-icon>
+                                JavaScript
+                            </span>
+
+                            <span class="tech">
+                                <iconify-icon icon="devicon:nodejs"></iconify-icon>
+                                Node.js
+                            </span>
+
+                            <span class="tech">
+                                IA
+                            </span>
+
+                        </div>
+
+                        <div class="project-info">
+
+                            <span>
+                                ★ 4.8
+                            </span>
+
+                            <span>
+                                ◉ 1.9k visualizações
+                            </span>
+
+                        </div>
+
+                        <div class="project-bottom">
+
+                            <strong>
+                                Grátis
+                            </strong>
+
+                            <button>
+                                Ver projeto →
+                            </button>
+
+                        </div>
+
+                    </div>
 
                 </article>
-
 
             </div>
 
         </section>
 
 
-
-        <!-- EM ALTA -->
+        <!-- ==================== EM ALTA ==================== -->
 
         <section class="projects">
 
-            <h2>🔥 Em alta</h2>
+            <div class="section-heading">
+
+                <div>
+
+                    <span class="section-label">
+                        POPULARES
+                    </span>
+
+                    <h2>
+                        Em alta
+                    </h2>
+
+                </div>
+
+                <a href="#" class="see-all">
+                    Ver todos →
+                </a>
+
+            </div>
 
 
             <div class="project-list">
 
-
                 <article class="project-card">
 
-                    <h3>AI Assistant</h3>
+                    <div class="project-preview">
 
-                    <p>
-                        Assistente inteligente criado
-                        para aplicações modernas.
-                    </p>
+                        <div class="preview-content">
 
-                    <span>
-                        JavaScript · Node.js · IA
-                    </span>
+                            <span>
+                                ARTIFICIAL
+                            </span>
 
-                    <strong>
-                        R$ 19,90
-                    </strong>
+                            <strong>
+                                Intelligence
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                    <div class="project-content">
+
+                        <div class="project-title">
+
+                            <div>
+
+                                <h3>
+                                    AI Assistant
+                                </h3>
+
+                                <small>
+                                    por AI Labs
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                        <p>
+                            Assistente inteligente criado para
+                            aplicações modernas.
+                        </p>
+
+                        <div class="project-techs">
+
+                            <span class="tech">
+                                <iconify-icon icon="devicon:javascript"></iconify-icon>
+                                JavaScript
+                            </span>
+
+                            <span class="tech">
+                                <iconify-icon icon="devicon:nodejs"></iconify-icon>
+                                Node.js
+                            </span>
+
+                            <span class="tech">
+                                IA
+                            </span>
+
+                        </div>
+
+                        <div class="project-info">
+
+                            <span>
+                                ★ 4.9
+                            </span>
+
+                            <span>
+                                ◉ 2.4k visualizações
+                            </span>
+
+                        </div>
+
+                        <div class="project-bottom">
+
+                            <strong>
+                                R$ 19,90
+                            </strong>
+
+                            <button>
+                                Ver projeto →
+                            </button>
+
+                        </div>
+
+                    </div>
 
                 </article>
 
 
-
                 <article class="project-card">
 
-                    <h3>Neon Dashboard</h3>
+                    <div class="project-preview">
 
-                    <p>
-                        Dashboard moderno com gráficos,
-                        métricas e efeitos interativos.
-                    </p>
+                        <div class="preview-content">
 
-                    <span>
-                        HTML · CSS · JavaScript
-                    </span>
+                            <span>
+                                NEON
+                            </span>
 
-                    <strong>
-                        R$ 14,90
-                    </strong>
+                            <strong>
+                                Dashboard
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                    <div class="project-content">
+
+                        <div class="project-title">
+
+                            <div>
+
+                                <h3>
+                                    Neon Dashboard
+                                </h3>
+
+                                <small>
+                                    por CodeLab
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                        <p>
+                            Dashboard moderno com gráficos,
+                            métricas e efeitos interativos.
+                        </p>
+
+                        <div class="project-techs">
+
+                            <span class="tech">
+                                <iconify-icon icon="devicon:html5"></iconify-icon>
+                                HTML
+                            </span>
+
+                            <span class="tech">
+                                <iconify-icon icon="devicon:css3"></iconify-icon>
+                                CSS
+                            </span>
+
+                            <span class="tech">
+                                <iconify-icon icon="devicon:javascript"></iconify-icon>
+                                JavaScript
+                            </span>
+
+                        </div>
+
+                        <div class="project-info">
+
+                            <span>
+                                ★ 4.7
+                            </span>
+
+                            <span>
+                                ◉ 1.7k visualizações
+                            </span>
+
+                        </div>
+
+                        <div class="project-bottom">
+
+                            <strong>
+                                R$ 14,90
+                            </strong>
+
+                            <button>
+                                Ver projeto →
+                            </button>
+
+                        </div>
+
+                    </div>
 
                 </article>
 
 
-
                 <article class="project-card">
 
-                    <h3>Smart Chatbot</h3>
+                    <div class="project-preview">
 
-                    <p>
-                        Chatbot inteligente para aplicações
-                        web utilizando inteligência artificial.
-                    </p>
+                        <div class="preview-content">
 
-                    <span>
-                        JavaScript · Node.js · IA
-                    </span>
+                            <span>
+                                SMART
+                            </span>
 
-                    <strong>
-                        Grátis
-                    </strong>
+                            <strong>
+                                Chatbot
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                    <div class="project-content">
+
+                        <div class="project-title">
+
+                            <div>
+
+                                <h3>
+                                    Smart Chatbot
+                                </h3>
+
+                                <small>
+                                    por DevAI
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                        <p>
+                            Chatbot inteligente para aplicações
+                            web utilizando inteligência artificial.
+                        </p>
+
+                        <div class="project-techs">
+
+                            <span class="tech">
+                                <iconify-icon icon="devicon:javascript"></iconify-icon>
+                                JavaScript
+                            </span>
+
+                            <span class="tech">
+                                <iconify-icon icon="devicon:nodejs"></iconify-icon>
+                                Node.js
+                            </span>
+
+                            <span class="tech">
+                                IA
+                            </span>
+
+                        </div>
+
+                        <div class="project-info">
+
+                            <span>
+                                ★ 4.8
+                            </span>
+
+                            <span>
+                                ◉ 1.9k visualizações
+                            </span>
+
+                        </div>
+
+                        <div class="project-bottom">
+
+                            <strong>
+                                Grátis
+                            </strong>
+
+                            <button>
+                                Ver projeto →
+                            </button>
+
+                        </div>
+
+                    </div>
 
                 </article>
-
 
             </div>
 
         </section>
-
 
     </main>
 
 
+    <!-- ==================== FOOTER ==================== -->
 
-    <!-- FOOTER -->
+    <footer class="footer">
 
-    <footer>
+        <div class="footer-container">
 
-        <a
-            href="https://github.com/joelsonbr/DevShelf"
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-            GitHub
-        </a>
+            <!-- MARCA -->
+            <div class="footer-brand">
 
-        <p>
-            © 2026 DevShelf
-        </p>
+                <a href="#" class="footer-logo">
+                    Dev<span>Shelf</span>
+                </a>
+
+                <p>
+                    Projetos e recursos para desenvolvedores.
+                    Encontre, compre e compartilhe código.
+                </p>
+
+                <div class="footer-socials">
+
+                    <a href="https://github.com/joelsonbr/DevShelf" target="_blank" rel="noopener noreferrer">
+                        GitHub
+                    </a>
+
+                    <a href="#">
+                        Discord
+                    </a>
+
+                    <a href="#">
+                        X
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- EXPLORAR -->
+            <div class="footer-column">
+
+                <h4>Explorar</h4>
+
+                <a href="#">Categorias</a>
+                <a href="#">Linguagens</a>
+                <a href="#">Projetos em destaque</a>
+                <a href="#">Em alta</a>
+
+            </div>
+
+
+            <!-- RECURSOS -->
+            <div class="footer-column">
+
+                <h4>Recursos</h4>
+
+                <a href="#">Como funciona</a>
+                <a href="#">Publicar projeto</a>
+                <a href="#">FAQ</a>
+                <a href="#">Central de ajuda</a>
+
+            </div>
+
+
+            <!-- DEVSHELF -->
+            <div class="footer-column">
+
+                <h4>DevShelf</h4>
+
+                <a href="#">Sobre nós</a>
+                <a href="#">Contato</a>
+
+                <a href="https://github.com/joelsonbr/DevShelf" target="_blank" rel="noopener noreferrer">
+                    GitHub
+                </a>
+
+                <a href="#">Termos de uso</a>
+
+            </div>
+
+        </div>
+
+
+        <!-- RODAPÉ INFERIOR -->
+        <div class="footer-bottom">
+
+            <span>
+                © 2026 DevShelf. Todos os direitos reservados.
+            </span>
+
+            <div>
+
+                <a href="#">
+                    Privacidade
+                </a>
+
+                <a href="#">
+                    Termos
+                </a>
+
+            </div>
+
+        </div>
 
     </footer>
-
 
 </body>
 
