@@ -39,7 +39,7 @@ section {
 
 
 /* =========================================================
-   HEADER
+   HEADER - DESKTOP
 ========================================================= */
 
 .header {
@@ -61,6 +61,8 @@ section {
     align-items: center;
     gap: 28px;
 }
+
+
 
 /* =========================================================
    LOGO
@@ -241,151 +243,146 @@ main {
 }
 
 
-/* =========================================================
+/* ========================================
    HERO
-========================================================= */
+======================================== */
 
 .hero {
     position: relative;
-
-    text-align: center;
-
-    padding: 120px 20px 100px;
-
-    overflow: hidden;
-}
-
-.hero-content {
-    max-width: 850px;
-
-    margin: 0 auto;
-}
-
-
-/* =========================================================
-   HERO - BADGE
-========================================================= */
-
-.hero-badge {
-    display: inline-flex;
-    align-items: center;
-
-    gap: 8px;
-
-    margin-bottom: 24px;
-
-    padding: 8px 14px;
-
-    background: #151820;
-
-    border: 1px solid #292e39;
-    border-radius: 999px;
-
-    color: #aeb4c0;
-
-    font-size: 13px;
-}
-
-.hero-badge iconify-icon {
-    font-size: 15px;
-}
-
-
-/* =========================================================
-   HERO - TÍTULO
-========================================================= */
-
-.hero h1 {
-    margin-bottom: 25px;
-
-    font-size: 60px;
-    line-height: 1.05;
-
-    letter-spacing: -2px;
-}
-
-.hero h1 span {
-    color: #aeb4c0;
-}
-
-
-/* =========================================================
-   HERO - DESCRIÇÃO
-========================================================= */
-
-.hero p {
-    max-width: 680px;
-
-    margin: 0 auto 35px;
-
-    color: #8f96a3;
-
-    font-size: 18px;
-    line-height: 1.7;
-}
-
-
-/* =========================================================
-   HERO - BOTÕES
-========================================================= */
-
-.hero-actions {
+    min-height: 520px;
     display: flex;
     align-items: center;
     justify-content: center;
-
-    gap: 12px;
+    padding: 80px 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-align: center;
 }
 
+/* brilho sutil no fundo */
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+    background: radial-gradient(circle,
+            rgba(255, 255, 255, 0.055) 0%,
+            rgba(255, 255, 255, 0.018) 35%,
+            transparent 70%);
+    pointer-events: none;
+}
+
+/* conteúdo */
+.hero-content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 820px;
+}
+
+/* BADGE */
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 24px;
+    padding: 7px 12px;
+    background: #151820;
+    border: 1px solid #292e39;
+    border-radius: 999px;
+    color: #9ba3b2;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.hero-badge iconify-icon {
+    color: #ffffff;
+    font-size: 15px;
+}
+
+/* TÍTULO */
+.hero h1 {
+    margin: 0;
+    color: #ffffff;
+    font-size: clamp(42px, 6vw, 72px);
+    line-height: 1.05;
+    letter-spacing: -2.5px;
+    font-weight: 750;
+}
+
+.hero h1 span {
+    color: #777f8e;
+}
+
+/* TEXTO */
+.hero p {
+    max-width: 650px;
+    margin: 24px auto 0;
+    color: #8f96a3;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+/* BOTÕES */
+.hero-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 32px;
+}
+
+/* botão principal */
 .hero-primary,
 .hero-secondary {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-
-    gap: 8px;
-
-    padding: 14px 22px;
-
+    gap: 9px;
+    height: 44px;
+    padding: 0 17px;
     border-radius: 8px;
-
+    font-size: 13px;
+    font-weight: 600;
     text-decoration: none;
-
-    font-size: 15px;
-    font-weight: bold;
-
-    transition: 0.2s;
+    box-sizing: border-box;
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
 }
 
 .hero-primary {
-    background: #ffffff;
-
-    border: 1px solid #ffffff;
-
     color: #0b0d12;
+    background: #ffffff;
+    border: 1px solid #ffffff;
 }
 
 .hero-primary:hover {
+    background: #e8e8e8;
+    border-color: #e8e8e8;
     transform: translateY(-2px);
 }
 
 .hero-primary iconify-icon {
-    font-size: 17px;
+    font-size: 16px;
 }
 
 .hero-secondary {
-    background: #151820;
-
-    border: 1px solid #292e39;
-
     color: #ffffff;
+    background: #151820;
+    border: 1px solid #292e39;
 }
 
 .hero-secondary:hover {
-    background: #202530;
+    background: #1b1f28;
     border-color: #454c5b;
+    transform: translateY(-2px);
 }
-
 
 /* =========================================================
    CABEÇALHO DAS SEÇÕES
@@ -1114,13 +1111,207 @@ main {
     color: #ffffff;
 }
 
+/* ========================================
+   HERO — FUNDO
+======================================== */
+
+.hero {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+}
+
+/* Glow */
+.hero::before {
+    content: "";
+    position: absolute;
+
+    width: 650px;
+    height: 650px;
+
+    top: 45%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    background: radial-gradient(circle,
+            rgba(130, 140, 165, 0.10) 0%,
+            rgba(7, 55, 175, 0.05) 35%,
+            transparent 70%);
+
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Mantém o conteúdo acima do glow */
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+/* ========================================
+   HERO — ESTRELAS
+======================================== */
+
+.hero-stars {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.hero-stars span {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+
+    background: #ffffff;
+    border-radius: 50%;
+
+    opacity: 0.25;
+
+    animation:
+        starFloat 5s ease-in-out infinite,
+        starTwinkle 3s ease-in-out infinite;
+}
+
+/* posições */
+
+.hero-stars span:nth-child(1) {
+    top: 20%;
+    left: 18%;
+    animation-delay: 0s;
+}
+
+.hero-stars span:nth-child(2) {
+    top: 30%;
+    left: 78%;
+    animation-delay: 1s;
+}
+
+.hero-stars span:nth-child(3) {
+    top: 58%;
+    left: 12%;
+    animation-delay: 2s;
+}
+
+.hero-stars span:nth-child(4) {
+    top: 68%;
+    left: 85%;
+    animation-delay: 0.5s;
+}
+
+.hero-stars span:nth-child(5) {
+    top: 16%;
+    left: 65%;
+    animation-delay: 1.5s;
+}
+
+.hero-stars span:nth-child(6) {
+    top: 75%;
+    left: 28%;
+    animation-delay: 2.5s;
+}
+
+.hero-stars span:nth-child(7) {
+    top: 45%;
+    left: 92%;
+    animation-delay: 1.2s;
+}
+
+.hero-stars span:nth-child(8) {
+    top: 40%;
+    left: 7%;
+    animation-delay: 3s;
+}
+
+
+/* movimento */
+
+@keyframes starFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+
+/* brilho */
+
+@keyframes starTwinkle {
+
+    0%,
+    100% {
+        opacity: 0.15;
+        transform: scale(0.8);
+    }
+
+    50% {
+        opacity: 0.65;
+        transform: scale(1.2);
+    }
+}
+
+/* ========================================
+   HERO — ENTRADA
+======================================== */
+
+.hero-badge {
+    animation: heroFadeUp 0.7s ease both;
+}
+
+.hero h1 {
+    animation: heroTitle 0.8s ease 0.1s both;
+}
+
+.hero p {
+    animation: heroFadeUp 0.7s ease 0.25s both;
+}
+
+.hero-actions {
+    animation: heroFadeUp 0.7s ease 0.4s both;
+}
+
+
+@keyframes heroFadeUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+@keyframes heroTitle {
+
+    from {
+        opacity: 0;
+        transform: translateY(28px);
+        filter: blur(6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+
+}
+
 
 /* ========================================
    RESPONSIVIDADE — CELULAR
-======================================== */
-
-/* ========================================
-   HEADER — CELULAR
 ======================================== */
 
 /* ========================================
@@ -1134,26 +1325,26 @@ main {
         overflow-x: hidden;
     }
 
-    /* HEADER */
+
+    /* ========================================
+       HEADER
+    ======================================== */
 
     .header {
-        width: 100%;
         height: auto;
+        min-height: 0;
     }
 
     .header-container {
+        position: relative;
         width: 100%;
         height: auto;
-
-        margin: 0;
+        min-height: 0;
         padding: 12px 16px;
-
         box-sizing: border-box;
 
         display: grid;
-
         grid-template-columns: 1fr auto;
-
         grid-template-areas:
             "logo menu"
             "search search";
@@ -1161,113 +1352,107 @@ main {
         gap: 12px 16px;
     }
 
-
     /* LOGO */
-
     .logo {
         grid-area: logo;
-        font-size: 21px;
     }
 
-
-    /* BOTÃO MENU */
-
+    /* BOTÃO */
     .mobile-menu-button {
         grid-area: menu;
 
         display: flex;
-
         align-items: center;
         justify-content: center;
 
         width: 40px;
         height: 40px;
-
         padding: 0;
 
         background: #151820;
-
         border: 1px solid #292e39;
         border-radius: 8px;
 
         color: #ffffff;
-
         font-size: 20px;
-
         cursor: pointer;
     }
 
-
     /* BUSCA */
-
     .search-box {
         grid-area: search;
 
         width: 100%;
         height: 44px;
-
         box-sizing: border-box;
     }
 
-
     /* ========================================
-       MENU FECHADO
+       PAINEL MOBILE
     ======================================== */
 
-    nav,
-    .header-actions {
-        display: none;
-    }
+    .mobile-menu-content {
+        display: block;
+        /* IMPORTANTE */
+        position: absolute;
 
-
-    /* ========================================
-       MENU ABERTO
-    ======================================== */
-
-    .header-container.mobile-open {
-
-        grid-template-areas:
-            "logo menu"
-            "search search"
-            "nav nav"
-            "actions actions";
-    }
-
-
-    /* NAVEGAÇÃO */
-
-    .header-container.mobile-open nav {
-
-        grid-area: nav;
-
-        display: flex;
-
-        flex-direction: column;
-        align-items: stretch;
+        top: 100%;
+        left: 0;
 
         width: 100%;
+        box-sizing: border-box;
 
+        padding: 12px 16px 16px;
+
+        background: rgba(11, 13, 18, 0.94);
+
+        border-top: 1px solid #242832;
+        border-bottom: 1px solid #242832;
+
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+
+        z-index: 1000;
+
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+
+        transform: translateY(-6px);
+
+        transition:
+            opacity 0.22s ease,
+            transform 0.22s ease,
+            visibility 0.22s ease;
+    }
+
+    /* ABERTO */
+    .header-container.mobile-open .mobile-menu-content {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transform: translateY(0);
+    }
+
+    /* NAV */
+    .mobile-menu-content nav {
+        display: flex;
+        flex-direction: column;
+
+        width: 100%;
         gap: 4px;
 
         margin: 0;
-        padding-top: 10px;
-
-        border-top: 1px solid #242832;
-
-        animation: menuDown 0.2s ease;
     }
 
-
-    /* LINKS */
-
-    .header-container.mobile-open nav a {
+    .mobile-menu-content nav a {
+        display: block;
 
         padding: 12px 8px;
 
         border-radius: 7px;
 
-        color: #8f96e3;
-
+        color: #8f96a3;
         font-size: 13px;
 
         text-decoration: none;
@@ -1277,67 +1462,33 @@ main {
             color 0.2s ease;
     }
 
-
-    .header-container.mobile-open nav a:hover {
-
+    .mobile-menu-content nav a:hover {
         background: #151820;
-
         color: #ffffff;
     }
 
-
-    /* ========================================
-       AÇÕES
-    ======================================== */
-
-    .header-container.mobile-open .header-actions {
-
-        grid-area: actions;
-
+    /* AÇÕES */
+    .mobile-menu-content .header-actions {
         display: flex;
-
         flex-direction: column;
 
         width: 100%;
 
         gap: 8px;
 
+        margin: 10px 0 0;
         padding-top: 10px;
 
         border-top: 1px solid #242832;
-
-        animation: menuDown 0.2s ease;
     }
 
-
-    /* BOTÕES */
-
-    .header-container.mobile-open .login-button,
-    .header-container.mobile-open .publish-button {
-
+    .mobile-menu-content .login-button,
+    .mobile-menu-content .publish-button {
         width: 100%;
         height: 42px;
-
         box-sizing: border-box;
     }
 
 
-    /* ========================================
-       ANIMAÇÃO
-    ======================================== */
-
-    @keyframes menuDown {
-
-        from {
-            opacity: 0;
-            transform: translateY(-4px);
-        }
-
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-    }
 
 }
