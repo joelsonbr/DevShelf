@@ -661,7 +661,7 @@ main {
    TEXTO DA TECNOLOGIA
 ========================================================= */
 
-.language-card > div {
+.language-card>div {
     display: flex;
     flex-direction: column;
 
@@ -744,11 +744,9 @@ main {
     justify-content: center;
 
     background:
-        radial-gradient(
-            circle at center,
+        radial-gradient(circle at center,
             #1d222c 0%,
-            #10131a 60%
-        );
+            #10131a 60%);
 
     border-bottom: 1px solid #292e39;
 }
@@ -814,7 +812,7 @@ main {
    DESCRIÇÃO
 ========================================================= */
 
-.project-content > p {
+.project-content>p {
     margin: 18px 0;
 
     color: #8f96a3;
@@ -1098,7 +1096,7 @@ main {
     font-size: 11px;
 }
 
-.footer-bottom > div {
+.footer-bottom>div {
     display: flex;
 
     gap: 18px;
@@ -1117,183 +1115,229 @@ main {
 }
 
 
-/* =========================================================
-   RESPONSIVIDADE
-========================================================= */
+/* ========================================
+   RESPONSIVIDADE — CELULAR
+======================================== */
 
-@media (max-width: 1000px) {
+/* ========================================
+   HEADER — CELULAR
+======================================== */
 
-    .header-container {
-        flex-wrap: wrap;
+/* ========================================
+   HEADER — CELULAR
+======================================== */
 
-        padding: 18px 0;
+@media (max-width: 450px) {
+
+    html,
+    body {
+        overflow-x: hidden;
     }
 
-    nav {
-        order: 3;
+    /* HEADER */
 
+    .header {
         width: 100%;
+        height: auto;
+    }
+
+    .header-container {
+        width: 100%;
+        height: auto;
 
         margin: 0;
+        padding: 12px 16px;
 
+        box-sizing: border-box;
+
+        display: grid;
+
+        grid-template-columns: 1fr auto;
+
+        grid-template-areas:
+            "logo menu"
+            "search search";
+
+        gap: 12px 16px;
+    }
+
+
+    /* LOGO */
+
+    .logo {
+        grid-area: logo;
+        font-size: 21px;
+    }
+
+
+    /* BOTÃO MENU */
+
+    .mobile-menu-button {
+        grid-area: menu;
+
+        display: flex;
+
+        align-items: center;
         justify-content: center;
+
+        width: 40px;
+        height: 40px;
+
+        padding: 0;
+
+        background: #151820;
+
+        border: 1px solid #292e39;
+        border-radius: 8px;
+
+        color: #ffffff;
+
+        font-size: 20px;
+
+        cursor: pointer;
     }
 
-    .category-grid {
-        grid-template-columns: repeat(2, 1fr);
+
+    /* BUSCA */
+
+    .search-box {
+        grid-area: search;
+
+        width: 100%;
+        height: 44px;
+
+        box-sizing: border-box;
     }
 
-    .language-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
 
-    .project-list {
-        grid-template-columns: repeat(2, 1fr);
-    }
+    /* ========================================
+       MENU FECHADO
+    ======================================== */
 
-    .footer-container {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .footer-brand {
-        grid-column: 1 / -1;
-
-        max-width: 450px;
-    }
-}
-
-
-/* =========================================================
-   TABLET
-========================================================= */
-
-@media (max-width: 700px) {
-
-    .hero {
-        padding: 90px 10px 70px;
-    }
-
-    .hero h1 {
-        font-size: 46px;
-
-        letter-spacing: -1.5px;
-    }
-
-    .hero p {
-        font-size: 16px;
-    }
-
-    .language-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .project-list {
-        grid-template-columns: 1fr;
-    }
-
-    .section-heading {
-        align-items: flex-start;
-    }
-}
-
-
-/* =========================================================
-   CELULAR
-========================================================= */
-
-@media (max-width: 500px) {
-
-    .header-container {
-        width: calc(100% - 30px);
-    }
-
+    nav,
     .header-actions {
+        display: none;
+    }
+
+
+    /* ========================================
+       MENU ABERTO
+    ======================================== */
+
+    .header-container.mobile-open {
+
+        grid-template-areas:
+            "logo menu"
+            "search search"
+            "nav nav"
+            "actions actions";
+    }
+
+
+    /* NAVEGAÇÃO */
+
+    .header-container.mobile-open nav {
+
+        grid-area: nav;
+
+        display: flex;
+
+        flex-direction: column;
+        align-items: stretch;
+
         width: 100%;
+
+        gap: 4px;
+
+        margin: 0;
+        padding-top: 10px;
+
+        border-top: 1px solid #242832;
+
+        animation: menuDown 0.2s ease;
     }
 
-    .login-button,
-    .publish-button {
-        flex: 1;
+
+    /* LINKS */
+
+    .header-container.mobile-open nav a {
+
+        padding: 12px 8px;
+
+        border-radius: 7px;
+
+        color: #8f96e3;
+
+        font-size: 13px;
+
+        text-decoration: none;
+
+        transition:
+            background 0.2s ease,
+            color 0.2s ease;
     }
 
-    nav {
-        gap: 18px;
 
-        overflow-x: auto;
+    .header-container.mobile-open nav a:hover {
 
-        justify-content: flex-start;
+        background: #151820;
 
-        padding-bottom: 2px;
+        color: #ffffff;
     }
 
-    nav a {
-        white-space: nowrap;
-    }
 
-    main {
-        width: calc(100% - 30px);
-    }
+    /* ========================================
+       AÇÕES
+    ======================================== */
 
-    .hero {
-        padding: 70px 0 60px;
-    }
+    .header-container.mobile-open .header-actions {
 
-    .hero h1 {
-        font-size: 38px;
-    }
+        grid-area: actions;
 
-    .hero p {
-        font-size: 15px;
-    }
+        display: flex;
 
-    .hero-actions {
         flex-direction: column;
 
         width: 100%;
+
+        gap: 8px;
+
+        padding-top: 10px;
+
+        border-top: 1px solid #242832;
+
+        animation: menuDown 0.2s ease;
     }
 
-    .hero-primary,
-    .hero-secondary {
+
+    /* BOTÕES */
+
+    .header-container.mobile-open .login-button,
+    .header-container.mobile-open .publish-button {
+
         width: 100%;
+        height: 42px;
+
+        box-sizing: border-box;
     }
 
-    .category-grid {
-        grid-template-columns: 1fr;
+
+    /* ========================================
+       ANIMAÇÃO
+    ======================================== */
+
+    @keyframes menuDown {
+
+        from {
+            opacity: 0;
+            transform: translateY(-4px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
     }
 
-    .language-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .section-heading {
-        flex-direction: column;
-    }
-
-    .section-link {
-        margin-top: 3px;
-    }
-
-    .footer-container {
-        width: calc(100% - 30px);
-
-        grid-template-columns: 1fr;
-
-        gap: 35px;
-
-        padding: 45px 0;
-    }
-
-    .footer-brand {
-        grid-column: auto;
-    }
-
-    .footer-bottom {
-        width: calc(100% - 30px);
-
-        flex-direction: column;
-
-        align-items: flex-start;
-
-        padding: 20px 0;
-    }
 }
