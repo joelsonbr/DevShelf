@@ -346,12 +346,9 @@ main {
 }
 
 /* BOTÕES */
-.hero-actions {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    margin-top: 32px;
+.hero-actions.is-visible .hero-primary,
+.hero-actions.is-visible .hero-secondary {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.22);
 }
 
 /* botão principal */
@@ -389,6 +386,11 @@ main {
 
 .hero-primary iconify-icon {
     font-size: 16px;
+
+    display: inline-flex;
+    flex-shrink: 0;
+    opacity: 1;
+    visibility: visible;
 }
 
 .hero-secondary {
@@ -1435,6 +1437,12 @@ main {
 }
 
 .hero-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 32px;
+
     animation: heroFadeUp 0.7s ease 0.4s both;
 }
 
