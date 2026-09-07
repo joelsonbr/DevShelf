@@ -5,46 +5,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <meta name="description"
+        content="DevShelf — marketplace de projetos, componentes e recursos para desenvolvedores.">
+    <meta name="theme-color" content="#0a0a0f">
+
     <title>DevShelf — Projetos para Desenvolvedores</title>
 
     <!-- Iconify -->
     <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/desktop.css" media="(min-width: 1024px)">
+    <link rel="stylesheet" href="css/tablet.css" media="(min-width: 768px) and (max-width: 1023px)">
+    <link rel="stylesheet" href="css/mobile.css" media="(max-width: 767px)">
 </head>
 
 <body>
 
-    <!-- =========================
+    <!-- ==================================================
          HEADER
-    ========================== -->
+    =================================================== -->
     <header class="header">
+
         <div class="header-container">
 
-            <a href="/" class="logo">
+            <!-- LOGO -->
+            <a href="/" class="logo" aria-label="DevShelf - Página inicial">
                 Dev<span>Shelf</span>
             </a>
 
-            <button class="mobile-menu-button" id="mobileMenuButton">
+            <!-- MOBILE MENU BUTTON -->
+            <button
+                class="mobile-menu-button"
+                id="mobileMenuButton"
+                type="button"
+                aria-label="Abrir menu"
+                aria-expanded="false"
+                aria-controls="mobileMenuContent">
+
                 <iconify-icon icon="lucide:menu"></iconify-icon>
+
             </button>
 
+            <!-- SEARCH -->
             <div class="search-box">
+
                 <iconify-icon icon="lucide:search"></iconify-icon>
-                <input type="text" placeholder="Buscar projetos, tecnologias...">
+
+                <input
+                    type="search"
+                    placeholder="Buscar projetos, tecnologias..."
+                    aria-label="Buscar projetos e tecnologias">
+
             </div>
 
-            <!-- MENU MOBILE -->
-            <div class="mobile-menu-content">
+            <!-- MENU -->
+            <div class="mobile-menu-content" id="mobileMenuContent">
 
-                <nav>
-                    <a href="/projetos">Explorar</a>
-                    <a href="/categorias">Categorias</a>
-                    <a href="/linguagens">Tecnologias</a>
+                <nav class="main-nav" aria-label="Navegação principal">
+
+                    <a href="/projetos">
+                        Explorar
+                    </a>
+
+                    <a href="/categorias">
+                        Categorias
+                    </a>
+
+                    <a href="/linguagens">
+                        Tecnologias
+                    </a>
+
                 </nav>
 
+                <!-- HEADER ACTIONS -->
                 <div class="header-actions">
+
                     <a href="/login" class="login-button">
                         Entrar
                     </a>
@@ -52,33 +89,60 @@
                     <a href="/publicar" class="publish-button">
                         Publicar projeto
                     </a>
+
                 </div>
 
             </div>
 
         </div>
+
     </header>
 
 
+    <!-- ==================================================
+         MAIN
+    =================================================== -->
     <main>
 
-        <!-- =========================
+
+        <!-- ==================================================
              HERO
-        ========================== -->
+        =================================================== -->
         <section class="hero">
 
+            <!-- ELEMENTOS FLUTUANTES -->
             <div class="hero-floating-elements" aria-hidden="true">
 
-                <span class="floating-code code-1">&lt;/&gt;</span>
-                <span class="floating-code code-2">{ }</span>
-                <span class="floating-code code-3">React</span>
-                <span class="floating-code code-4">JS</span>
-                <span class="floating-code code-5">01</span>
-                <span class="floating-code code-6">⚛</span>
+                <span class="floating-code code-1">
+                    &lt;/&gt;
+                </span>
+
+                <span class="floating-code code-2">
+                    { }
+                </span>
+
+                <span class="floating-code code-3">
+                    React
+                </span>
+
+                <span class="floating-code code-4">
+                    JS
+                </span>
+
+                <span class="floating-code code-5">
+                    01
+                </span>
+
+                <span class="floating-code code-6">
+                    ⚛
+                </span>
 
             </div>
 
+
+            <!-- ESTRELAS -->
             <div class="hero-stars" aria-hidden="true">
+
                 <span></span>
                 <span></span>
                 <span></span>
@@ -87,19 +151,28 @@
                 <span></span>
                 <span></span>
                 <span></span>
+                <span></span>
+
             </div>
 
+
+            <!-- HERO CONTENT -->
             <div class="hero-content">
 
                 <span class="hero-badge">
+
                     <iconify-icon icon="lucide:sparkles"></iconify-icon>
+
                     Marketplace para desenvolvedores
+
                 </span>
+
 
                 <h1>
                     Encontre projetos.<br>
                     <span>Aprenda. Crie. Venda.</span>
                 </h1>
+
 
                 <p>
                     Explore projetos, componentes e recursos criados
@@ -107,12 +180,17 @@
                     seu próprio trabalho.
                 </p>
 
+
                 <div class="hero-actions">
 
                     <a href="/projetos" class="hero-primary">
+
                         Explorar projetos
+
                         <iconify-icon icon="lucide:arrow-right"></iconify-icon>
+
                     </a>
+
 
                     <a href="/publicar" class="hero-secondary">
                         Publicar projeto
@@ -125,14 +203,16 @@
         </section>
 
 
-        <!-- =========================
+
+        <!-- ==================================================
              CATEGORIAS
-        ========================== -->
+        =================================================== -->
         <section class="categories" id="categorias">
 
             <div class="section-heading">
 
                 <div>
+
                     <span class="section-label">
                         EXPLORE
                     </span>
@@ -140,17 +220,23 @@
                     <h2>
                         Explore por categoria
                     </h2>
+
                 </div>
 
+
                 <a href="/categorias" class="section-link">
+
                     Ver todas
+
                     <iconify-icon icon="lucide:arrow-right"></iconify-icon>
+
                 </a>
 
             </div>
 
 
             <div class="category-grid">
+
 
                 <!-- UI / DESIGN -->
                 <a href="/categorias/ui-design" class="category-card">
@@ -160,16 +246,19 @@
                     </div>
 
                     <div class="category-content">
-                        <h3>UI / Design</h3>
+
+                        <h3>
+                            UI / Design
+                        </h3>
 
                         <p>
-                            Interfaces, dashboards e experiências
-                            modernas.
+                            Interfaces, dashboards e experiências modernas.
                         </p>
 
                         <small>
                             124 projetos
                         </small>
+
                     </div>
 
                 </a>
@@ -183,7 +272,10 @@
                     </div>
 
                     <div class="category-content">
-                        <h3>Websites</h3>
+
+                        <h3>
+                            Websites
+                        </h3>
 
                         <p>
                             Sites, landing pages e aplicações web.
@@ -192,6 +284,7 @@
                         <small>
                             186 projetos
                         </small>
+
                     </div>
 
                 </a>
@@ -205,7 +298,10 @@
                     </div>
 
                     <div class="category-content">
-                        <h3>Inteligência Artificial</h3>
+
+                        <h3>
+                            Inteligência Artificial
+                        </h3>
 
                         <p>
                             Projetos utilizando IA, automação e agentes.
@@ -214,6 +310,7 @@
                         <small>
                             92 projetos
                         </small>
+
                     </div>
 
                 </a>
@@ -227,7 +324,10 @@
                     </div>
 
                     <div class="category-content">
-                        <h3>Animações</h3>
+
+                        <h3>
+                            Animações
+                        </h3>
 
                         <p>
                             Efeitos, transições e experiências interativas.
@@ -236,6 +336,7 @@
                         <small>
                             71 projetos
                         </small>
+
                     </div>
 
                 </a>
@@ -249,7 +350,10 @@
                     </div>
 
                     <div class="category-content">
-                        <h3>Games</h3>
+
+                        <h3>
+                            Games
+                        </h3>
 
                         <p>
                             Jogos, sistemas e experiências interativas.
@@ -258,6 +362,7 @@
                         <small>
                             83 projetos
                         </small>
+
                     </div>
 
                 </a>
@@ -271,7 +376,10 @@
                     </div>
 
                     <div class="category-content">
-                        <h3>Componentes</h3>
+
+                        <h3>
+                            Componentes
+                        </h3>
 
                         <p>
                             Componentes reutilizáveis para seus projetos.
@@ -280,6 +388,7 @@
                         <small>
                             105 projetos
                         </small>
+
                     </div>
 
                 </a>
@@ -293,7 +402,10 @@
                     </div>
 
                     <div class="category-content">
-                        <h3>Ferramentas</h3>
+
+                        <h3>
+                            Ferramentas
+                        </h3>
 
                         <p>
                             Ferramentas, utilidades e automações.
@@ -302,6 +414,7 @@
                         <small>
                             64 projetos
                         </small>
+
                     </div>
 
                 </a>
@@ -315,7 +428,10 @@
                     </div>
 
                     <div class="category-content">
-                        <h3>Mobile</h3>
+
+                        <h3>
+                            Mobile
+                        </h3>
 
                         <p>
                             Aplicativos e experiências para dispositivos.
@@ -324,6 +440,7 @@
                         <small>
                             78 projetos
                         </small>
+
                     </div>
 
                 </a>
@@ -333,14 +450,16 @@
         </section>
 
 
-        <!-- =========================
-             LINGUAGENS
-        ========================== -->
+
+        <!-- ==================================================
+             LINGUAGENS / TECNOLOGIAS
+        =================================================== -->
         <section class="languages" id="linguagens">
 
             <div class="section-heading">
 
                 <div>
+
                     <span class="section-label">
                         TECNOLOGIAS
                     </span>
@@ -348,11 +467,16 @@
                     <h2>
                         Explore por linguagem
                     </h2>
+
                 </div>
 
+
                 <a href="/linguagens" class="section-link">
+
                     Ver todas
+
                     <iconify-icon icon="lucide:arrow-right"></iconify-icon>
+
                 </a>
 
             </div>
@@ -360,6 +484,8 @@
 
             <div class="language-grid">
 
+
+                <!-- HTML -->
                 <a href="/linguagens/html" class="language-card">
 
                     <span class="language-icon">
@@ -367,13 +493,21 @@
                     </span>
 
                     <div>
-                        <strong>HTML</strong>
-                        <small>86 projetos</small>
+
+                        <strong>
+                            HTML
+                        </strong>
+
+                        <small>
+                            86 projetos
+                        </small>
+
                     </div>
 
                 </a>
 
 
+                <!-- CSS -->
                 <a href="/linguagens/css" class="language-card">
 
                     <span class="language-icon">
@@ -381,13 +515,21 @@
                     </span>
 
                     <div>
-                        <strong>CSS</strong>
-                        <small>104 projetos</small>
+
+                        <strong>
+                            CSS
+                        </strong>
+
+                        <small>
+                            104 projetos
+                        </small>
+
                     </div>
 
                 </a>
 
 
+                <!-- JAVASCRIPT -->
                 <a href="/linguagens/javascript" class="language-card">
 
                     <span class="language-icon">
@@ -395,13 +537,21 @@
                     </span>
 
                     <div>
-                        <strong>JavaScript</strong>
-                        <small>142 projetos</small>
+
+                        <strong>
+                            JavaScript
+                        </strong>
+
+                        <small>
+                            142 projetos
+                        </small>
+
                     </div>
 
                 </a>
 
 
+                <!-- TYPESCRIPT -->
                 <a href="/linguagens/typescript" class="language-card">
 
                     <span class="language-icon">
@@ -409,13 +559,21 @@
                     </span>
 
                     <div>
-                        <strong>TypeScript</strong>
-                        <small>91 projetos</small>
+
+                        <strong>
+                            TypeScript
+                        </strong>
+
+                        <small>
+                            91 projetos
+                        </small>
+
                     </div>
 
                 </a>
 
 
+                <!-- PYTHON -->
                 <a href="/linguagens/python" class="language-card">
 
                     <span class="language-icon">
@@ -423,13 +581,21 @@
                     </span>
 
                     <div>
-                        <strong>Python</strong>
-                        <small>128 projetos</small>
+
+                        <strong>
+                            Python
+                        </strong>
+
+                        <small>
+                            128 projetos
+                        </small>
+
                     </div>
 
                 </a>
 
 
+                <!-- JAVA -->
                 <a href="/linguagens/java" class="language-card">
 
                     <span class="language-icon">
@@ -437,13 +603,21 @@
                     </span>
 
                     <div>
-                        <strong>Java</strong>
-                        <small>57 projetos</small>
+
+                        <strong>
+                            Java
+                        </strong>
+
+                        <small>
+                            57 projetos
+                        </small>
+
                     </div>
 
                 </a>
 
 
+                <!-- C# -->
                 <a href="/linguagens/csharp" class="language-card">
 
                     <span class="language-icon">
@@ -451,13 +625,21 @@
                     </span>
 
                     <div>
-                        <strong>C#</strong>
-                        <small>63 projetos</small>
+
+                        <strong>
+                            C#
+                        </strong>
+
+                        <small>
+                            63 projetos
+                        </small>
+
                     </div>
 
                 </a>
 
 
+                <!-- C++ -->
                 <a href="/linguagens/cpp" class="language-card">
 
                     <span class="language-icon">
@@ -465,13 +647,21 @@
                     </span>
 
                     <div>
-                        <strong>C++</strong>
-                        <small>48 projetos</small>
+
+                        <strong>
+                            C++
+                        </strong>
+
+                        <small>
+                            48 projetos
+                        </small>
+
                     </div>
 
                 </a>
 
 
+                <!-- REACT -->
                 <a href="/linguagens/react" class="language-card">
 
                     <span class="language-icon">
@@ -479,13 +669,21 @@
                     </span>
 
                     <div>
-                        <strong>React</strong>
-                        <small>113 projetos</small>
+
+                        <strong>
+                            React
+                        </strong>
+
+                        <small>
+                            113 projetos
+                        </small>
+
                     </div>
 
                 </a>
 
 
+                <!-- NODE.JS -->
                 <a href="/linguagens/nodejs" class="language-card">
 
                     <span class="language-icon">
@@ -493,8 +691,15 @@
                     </span>
 
                     <div>
-                        <strong>Node.js</strong>
-                        <small>97 projetos</small>
+
+                        <strong>
+                            Node.js
+                        </strong>
+
+                        <small>
+                            97 projetos
+                        </small>
+
                     </div>
 
                 </a>
@@ -504,14 +709,16 @@
         </section>
 
 
-        <!-- =========================
+
+        <!-- ==================================================
              PROJETOS EM DESTAQUE
-        ========================== -->
+        =================================================== -->
         <section class="projects" id="projetos">
 
             <div class="section-heading">
 
                 <div>
+
                     <span class="section-label">
                         DESTAQUES
                     </span>
@@ -519,17 +726,23 @@
                     <h2>
                         Projetos em destaque
                     </h2>
+
                 </div>
 
+
                 <a href="/projetos" class="section-link">
+
                     Ver todos
+
                     <iconify-icon icon="lucide:arrow-right"></iconify-icon>
+
                 </a>
 
             </div>
 
 
             <div class="project-list">
+
 
                 <!-- PROJETO 1 -->
                 <article class="project-card">
@@ -538,7 +751,9 @@
 
                         <div class="preview-content">
 
-                            <span>PROJECT</span>
+                            <span>
+                                PROJECT
+                            </span>
 
                             <strong>
                                 Galaxy
@@ -614,8 +829,7 @@
                             </strong>
 
                             <button type="button">
-                                Ver projeto
-                                →
+                                Ver projeto <span class="project-arrow">→</span>
                             </button>
 
                         </div>
@@ -625,6 +839,7 @@
                 </article>
 
 
+
                 <!-- PROJETO 2 -->
                 <article class="project-card">
 
@@ -632,7 +847,9 @@
 
                         <div class="preview-content">
 
-                            <span>PROJECT</span>
+                            <span>
+                                PROJECT
+                            </span>
 
                             <strong>
                                 Nexus
@@ -708,8 +925,7 @@
                             </strong>
 
                             <button type="button">
-                                Ver projeto
-                                →
+                                Ver projeto <span class="project-arrow">→</span>
                             </button>
 
                         </div>
@@ -719,6 +935,7 @@
                 </article>
 
 
+
                 <!-- PROJETO 3 -->
                 <article class="project-card">
 
@@ -726,7 +943,9 @@
 
                         <div class="preview-content">
 
-                            <span>PROJECT</span>
+                            <span>
+                                PROJECT
+                            </span>
 
                             <strong>
                                 Vision
@@ -797,8 +1016,7 @@
                             </strong>
 
                             <button type="button">
-                                Ver projeto
-                                →
+                                Ver projeto <span class="project-arrow">→</span>
                             </button>
 
                         </div>
@@ -808,6 +1026,7 @@
                 </article>
 
 
+
                 <!-- PROJETO 4 -->
                 <article class="project-card">
 
@@ -815,7 +1034,9 @@
 
                         <div class="preview-content">
 
-                            <span>PROJECT</span>
+                            <span>
+                                PROJECT
+                            </span>
 
                             <strong>
                                 Motion
@@ -886,8 +1107,7 @@
                             </strong>
 
                             <button type="button">
-                                Ver projeto
-                                →
+                                Ver projeto <span class="project-arrow">→</span>
                             </button>
 
                         </div>
@@ -897,6 +1117,7 @@
                 </article>
 
 
+
                 <!-- PROJETO 5 -->
                 <article class="project-card">
 
@@ -904,7 +1125,9 @@
 
                         <div class="preview-content">
 
-                            <span>PROJECT</span>
+                            <span>
+                                PROJECT
+                            </span>
 
                             <strong>
                                 Mobile
@@ -975,8 +1198,7 @@
                             </strong>
 
                             <button type="button">
-                                Ver projeto
-                                →
+                                Ver projeto <span class="project-arrow">→</span>
                             </button>
 
                         </div>
@@ -986,6 +1208,7 @@
                 </article>
 
 
+
                 <!-- PROJETO 6 -->
                 <article class="project-card">
 
@@ -993,7 +1216,9 @@
 
                         <div class="preview-content">
 
-                            <span>PROJECT</span>
+                            <span>
+                                PROJECT
+                            </span>
 
                             <strong>
                                 Tools
@@ -1064,8 +1289,7 @@
                             </strong>
 
                             <button type="button">
-                                Ver projeto
-                                →
+                                Ver projeto <span class="project-arrow">→</span>
                             </button>
 
                         </div>
@@ -1079,14 +1303,16 @@
         </section>
 
 
-        <!-- =========================
+
+        <!-- ==================================================
              EM ALTA
-        ========================== -->
+        =================================================== -->
         <section class="projects" id="trending-projects">
 
             <div class="section-heading">
 
                 <div>
+
                     <span class="section-label">
                         POPULARES
                     </span>
@@ -1094,17 +1320,23 @@
                     <h2>
                         Em alta
                     </h2>
+
                 </div>
 
+
                 <a href="/em-alta" class="section-link">
+
                     Ver todos
+
                     <iconify-icon icon="lucide:arrow-right"></iconify-icon>
+
                 </a>
 
             </div>
 
 
             <div class="project-list">
+
 
                 <!-- EM ALTA 1 -->
                 <article class="project-card">
@@ -1113,7 +1345,9 @@
 
                         <div class="preview-content">
 
-                            <span>TRENDING</span>
+                            <span>
+                                TRENDING
+                            </span>
 
                             <strong>
                                 AI Chat
@@ -1184,8 +1418,7 @@
                             </strong>
 
                             <button type="button">
-                                Ver projeto
-                                →
+                                Ver projeto <span class="project-arrow">→</span>
                             </button>
 
                         </div>
@@ -1195,6 +1428,7 @@
                 </article>
 
 
+
                 <!-- EM ALTA 2 -->
                 <article class="project-card">
 
@@ -1202,7 +1436,9 @@
 
                         <div class="preview-content">
 
-                            <span>TRENDING</span>
+                            <span>
+                                TRENDING
+                            </span>
 
                             <strong>
                                 Portfolio
@@ -1278,8 +1514,7 @@
                             </strong>
 
                             <button type="button">
-                                Ver projeto
-                                →
+                                Ver projeto <span class="project-arrow">→</span>
                             </button>
 
                         </div>
@@ -1289,6 +1524,7 @@
                 </article>
 
 
+
                 <!-- EM ALTA 3 -->
                 <article class="project-card">
 
@@ -1296,7 +1532,9 @@
 
                         <div class="preview-content">
 
-                            <span>TRENDING</span>
+                            <span>
+                                TRENDING
+                            </span>
 
                             <strong>
                                 SaaS
@@ -1367,8 +1605,7 @@
                             </strong>
 
                             <button type="button">
-                                Ver projeto
-                                →
+                                Ver projeto <span class="project-arrow">→</span>
                             </button>
 
                         </div>
@@ -1384,12 +1621,14 @@
     </main>
 
 
-    <!-- =========================
+
+    <!-- ==================================================
          FOOTER
-    ========================== -->
+    =================================================== -->
     <footer class="footer">
 
         <div class="footer-container">
+
 
             <!-- MARCA -->
             <div class="footer-brand">
@@ -1398,15 +1637,22 @@
                     Dev<span>Shelf</span>
                 </a>
 
+
                 <p>
                     Projetos, recursos e conhecimento
                     para desenvolvedores.
                 </p>
 
+
                 <div class="footer-socials">
 
-                    <a href="https://github.com/joelsonbr/DevShelf" target="_blank" rel="noopener noreferrer">
+                    <a
+                        href="https://github.com/joelsonbr/DevShelf"
+                        target="_blank"
+                        rel="noopener noreferrer">
+
                         GitHub
+
                     </a>
 
                     <a href="#">
@@ -1422,6 +1668,7 @@
             </div>
 
 
+
             <!-- EXPLORAR -->
             <div class="footer-column">
 
@@ -1429,27 +1676,24 @@
                     Explorar
                 </h4>
 
-                <!-- DIRECIONAR -->
                 <a href="/#projetos">
                     Explorar projetos
                 </a>
 
-                <!-- DIRECIONAR -->
                 <a href="/#categorias">
                     Categorias
                 </a>
 
-                <!-- DIRECIONAR -->
                 <a href="/#linguagens">
                     Tecnologias
                 </a>
 
-                <!-- DIRECIONAR -->
                 <a href="/#trending-projects">
                     Em alta
                 </a>
 
             </div>
+
 
 
             <!-- RECURSOS -->
@@ -1459,27 +1703,24 @@
                     Recursos
                 </h4>
 
-                <!-- DIRECIONAR -->
                 <a href="/#publicar">
                     Publicar projeto
                 </a>
 
-                <!-- OUTRA PÁGINA -->
                 <a href="/documentacao">
                     Documentação
                 </a>
 
-                <!-- OUTRA PÁGINA -->
                 <a href="/como-funciona">
                     Como funciona
                 </a>
 
-                <!-- OUTRA PÁGINA -->
                 <a href="/ajuda">
                     Central de ajuda
                 </a>
 
             </div>
+
 
 
             <!-- DEVSHELF -->
@@ -1489,22 +1730,23 @@
                     DevShelf
                 </h4>
 
-                <!-- OUTRA PÁGINA -->
                 <a href="/sobre">
                     Sobre o DevShelf
                 </a>
 
-                <!-- OUTRA PÁGINA -->
                 <a href="/contato">
                     Contato
                 </a>
 
-                <!-- GITHUB / EXTERNO -->
-                <a href="https://github.com/joelsonbr/DevShelf" target="_blank" rel="noopener noreferrer">
+                <a
+                    href="https://github.com/joelsonbr/DevShelf"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
                     GitHub
+
                 </a>
 
-                <!-- OUTRA PÁGINA -->
                 <a href="/termos">
                     Termos de uso
                 </a>
@@ -1514,12 +1756,14 @@
         </div>
 
 
+
         <!-- FOOTER BOTTOM -->
         <div class="footer-bottom">
 
             <span>
                 © 2026 DevShelf. Todos os direitos reservados.
             </span>
+
 
             <div>
 
@@ -1536,10 +1780,13 @@
         </div>
 
     </footer>
-    <!-- =========================
+
+
+
+    <!-- ==================================================
          JAVASCRIPT
-    ========================== -->
-    <script src="script.js"></script>
+    =================================================== -->
+    <script src="js/script.js"></script>
 
 </body>
 
