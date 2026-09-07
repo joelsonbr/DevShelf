@@ -328,6 +328,7 @@ section {
 
     transform: translateY(-1px);
 }
+
 /* ENTRAR */
 
 .login-button {
@@ -409,12 +410,10 @@ main {
     transform: translate(-50%, -50%);
 
     background:
-        radial-gradient(
-            circle,
+        radial-gradient(circle,
             rgba(130, 140, 165, 0.10) 0%,
             rgba(7, 55, 175, 0.05) 35%,
-            transparent 70%
-        );
+            transparent 70%);
 
     pointer-events: none;
 
@@ -833,6 +832,7 @@ main {
 ========================================================= */
 
 @keyframes floatingCode {
+
     0%,
     100% {
         transform: translateY(0) rotate(0deg);
@@ -845,6 +845,7 @@ main {
 
 
 @keyframes starFloat {
+
     0%,
     100% {
         transform: translateY(0);
@@ -857,6 +858,7 @@ main {
 
 
 @keyframes starTwinkle {
+
     0%,
     100% {
         opacity: 0.15;
@@ -1157,7 +1159,7 @@ main {
 
 /* Texto */
 
-.language-card > div {
+.language-card>div {
     display: flex;
     flex-direction: column;
 
@@ -1210,12 +1212,13 @@ main {
     border-radius: 14px;
 
     transition:
-        transform 0.25s,
-        border-color 0.25s;
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
 }
 
 .project-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-4px);
 
     border-color: #454c5b;
 }
@@ -1224,6 +1227,7 @@ main {
 /* Preview */
 
 .project-preview {
+    overflow: hidden;
     height: 170px;
 
     display: flex;
@@ -1231,13 +1235,45 @@ main {
     justify-content: center;
 
     background:
-        radial-gradient(
-            circle at center,
+        radial-gradient(circle at center,
             #1d222c 0%,
-            #10131a 60%
-        );
+            #10131a 60%);
 
     border-bottom: 1px solid #292e39;
+}
+
+.project-preview img {
+    transition: transform 0.35s ease;
+}
+
+.project-card:hover .project-preview img {
+    transform: scale(1.03);
+}
+
+.project-list > * {
+    opacity: 0;
+    transform: translateY(16px);
+
+    transition:
+        opacity 0.5s ease,
+        transform 0.5s ease;
+}
+
+.projects.is-visible .project-list > * {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.projects.is-visible .project-list > *:nth-child(1) {
+    transition-delay: 0.05s;
+}
+
+.projects.is-visible .project-list > *:nth-child(2) {
+    transition-delay: 0.12s;
+}
+
+.projects.is-visible .project-list > *:nth-child(3) {
+    transition-delay: 0.19s;
 }
 
 .preview-content {
@@ -1296,7 +1332,7 @@ main {
 
 /* Descrição */
 
-.project-content > p {
+.project-content>p {
     margin: 18px 0;
 
     color: #8f96a3;
@@ -1602,7 +1638,7 @@ main {
     font-size: 11px;
 }
 
-.footer-bottom > div {
+.footer-bottom>div {
     display: flex;
 
     gap: 18px;
@@ -1618,4 +1654,114 @@ main {
 
 .footer-bottom a:hover {
     color: #ffffff;
+}
+
+/* =========================================================
+   LINGUAGENS — ENTRADA DOS ITENS
+========================================================= */
+
+.language-item {
+    position: relative;
+
+    opacity: 0;
+    transform: translateY(12px);
+
+    cursor: pointer;
+
+    transition:
+        opacity 0.45s ease,
+        transform 0.45s ease,
+        border-color 0.25s ease,
+        background-color 0.25s ease;
+}
+
+
+/* =========================================================
+   QUANDO A SEÇÃO ENTRA NA TELA
+========================================================= */
+
+.languages.is-visible .language-item {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   ENTRADA EM SEQUÊNCIA
+========================================================= */
+
+.languages.is-visible .language-item:nth-child(1) {
+    transition-delay: 0.05s;
+}
+
+.languages.is-visible .language-item:nth-child(2) {
+    transition-delay: 0.10s;
+}
+
+.languages.is-visible .language-item:nth-child(3) {
+    transition-delay: 0.15s;
+}
+
+.languages.is-visible .language-item:nth-child(4) {
+    transition-delay: 0.20s;
+}
+
+.languages.is-visible .language-item:nth-child(5) {
+    transition-delay: 0.25s;
+}
+
+.languages.is-visible .language-item:nth-child(6) {
+    transition-delay: 0.30s;
+}
+
+.languages.is-visible .language-item:nth-child(7) {
+    transition-delay: 0.35s;
+}
+
+.languages.is-visible .language-item:nth-child(8) {
+    transition-delay: 0.40s;
+}
+
+.languages.is-visible .language-item:nth-child(9) {
+    transition-delay: 0.45s;
+}
+
+.languages.is-visible .language-item:nth-child(10) {
+    transition-delay: 0.50s;
+}
+
+
+/* =========================================================
+   HOVER
+========================================================= */
+
+.language-item:hover {
+    transform: translateY(-3px);
+
+    border-color: #3a414f;
+    background-color: #191d25;
+}
+
+
+/* =========================================================
+   SETA
+========================================================= */
+
+.language-item::after {
+    content: "→";
+
+    position: absolute;
+    right: 14px;
+
+    opacity: 0;
+    transform: translateX(-5px);
+
+    transition:
+        opacity 0.2s ease,
+        transform 0.2s ease;
+}
+
+.language-item:hover::after {
+    opacity: 1;
+    transform: translateX(0);
 }

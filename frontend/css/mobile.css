@@ -240,7 +240,10 @@ TÍTULOS DAS SEÇÕES
 ========================================================= */
 
 .section-heading {
-    margin-bottom: 22px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 24px;
 }
 
 .section-heading h2 {

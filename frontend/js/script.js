@@ -32,3 +32,22 @@ window.addEventListener("scroll", () => {
     heroBadge.style.opacity = opacity;
     heroBadge.style.transform = `translateY(-${move}px)`;
 });
+
+// categories reveal-on-scroll
+
+const revealElements = document.querySelectorAll('.reveal-on-scroll');
+
+const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            revealObserver.unobserve(entry.target);
+        }
+    });
+}, {
+    threshold: 0.15
+});
+
+revealElements.forEach((element) => {
+    revealObserver.observe(element);
+});
