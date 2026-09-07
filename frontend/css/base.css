@@ -146,12 +146,32 @@ section {
 
 
 /* =========================================================
-   MENU CONTENT
+   MENU MOBILE — SOBRE O CONTEÚDO
 ========================================================= */
 
 .mobile-menu-content {
-    display: contents;
+    position: absolute;
+
+    top: 100%;
+    left: 0;
+
+    width: 100%;
+
+    display: none;
+    flex-direction: column;
+
+    padding: 14px 18px 18px;
+
+    background: #0b0d12;
+
+    border-top: 1px solid #242832;
+    border-bottom: 1px solid #242832;
+
+    z-index: 1000;
 }
+
+.mobile-menu-content.active,
+
 
 
 /* =========================================================
@@ -275,6 +295,7 @@ section {
 
 .login-button,
 .publish-button {
+    text-align: center;
     display: inline-flex;
     align-items: center;
     justify-content: center;

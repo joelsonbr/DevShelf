@@ -51,3 +51,42 @@ const revealObserver = new IntersectionObserver((entries) => {
 revealElements.forEach((element) => {
     revealObserver.observe(element);
 });
+
+// =========================================================
+// MENU MOBILE
+// =========================================================
+
+const mobileMenuContent = document.getElementById('mobileMenuContent');
+
+if (mobileMenuButton && mobileMenuContent) {
+
+    mobileMenuButton.addEventListener('click', () => {
+
+        const isOpen = mobileMenuContent.classList.toggle('open');
+
+        mobileMenuButton.setAttribute('aria-expanded', isOpen);
+
+        mobileMenuButton.setAttribute(
+            'aria-label',
+            isOpen ? 'Fechar menu' : 'Abrir menu'
+        );
+
+    });
+
+    // Fecha ao clicar em qualquer link
+    const menuLinks = mobileMenuContent.querySelectorAll('a');
+
+    menuLinks.forEach((link) => {
+
+        link.addEventListener('click', () => {
+
+            mobileMenuContent.classList.remove('open');
+
+            mobileMenuButton.setAttribute('aria-expanded', 'false');
+            mobileMenuButton.setAttribute('aria-label', 'Abrir menu');
+
+        });
+
+    });
+
+}

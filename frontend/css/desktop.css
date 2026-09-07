@@ -347,6 +347,7 @@ FOOTER
     margin-top: 80px;
 }
 
+
 .footer-container {
     width: 90%;
     max-width: 1200px;
@@ -356,7 +357,7 @@ FOOTER
     grid-template-columns: 2fr 1fr 1fr 1fr;
 
     gap: 50px;
-
+    
 }
 
 .footer-bottom {
@@ -364,7 +365,16 @@ FOOTER
     max-width: 1200px;
 
     padding: 20px 0;
+    
+}
 
+footer a {
+    font-size: 14px;
+    transition: color 0.2s ease;
+}
+
+footer a:hover {
+    color: #ffffff;
 }
 
 /* =========================================================
